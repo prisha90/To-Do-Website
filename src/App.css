@@ -1,3 +1,9 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #010f2a;
@@ -6,11 +12,14 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   width: 100%;
-  max-width: 480px;
+  max-width: 600px;
   margin: 100px auto;
   padding: 30px;
   border-radius: 5px;
@@ -36,7 +45,7 @@ body {
 }
 
 .form-input {
-  width: 57%;
+  width: 65%;
   height: 40px;
   border: 1px solid #ddd;
   outline: none;
@@ -49,7 +58,7 @@ body {
 }
 
 .form-select {
-  width: 18%;
+  width: 15%;
   height: 57px;
   border: 1px solid #ddd;
   outline: none;
@@ -63,7 +72,7 @@ body {
 
 .form-btn {
   height: 57px;
-  width: 17%;
+  width: 15%;
   border: none;
   outline: none;
   padding: 5px;
@@ -81,11 +90,12 @@ body {
 }
 
 .todo-item {
-  padding: 15px;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #fafafa;
+  margin-left: 0.5rem;
   border-bottom: 1px solid #ddd;
   margin-top: 1rem;
   transition: background-color 0.3s;
@@ -108,7 +118,7 @@ body {
 
 .todo-item.completed h3 {
   text-decoration: line-through;
-  color: #aaa;
+  color: #0d3d08;
 }
 
 .todo-item p {
@@ -127,19 +137,10 @@ body {
   padding: 0.2rem;
 }
 
-.todo-item .btn-complete {
-  color: #ffffff;
-  margin-right: 10px;
-  color: #23ae41;
-  padding: 0.5rem;
-}
-
-.todo-item .btn-complete:hover {
-  color: #13481e;
-}
-
 .todo-item .btn-delete {
-  color: red;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
   padding: 0.5rem;
 }
 
@@ -147,10 +148,86 @@ body {
   color: rgb(139, 2, 2);
 }
 
+.todo-item .edit-window{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.todo-item .edit-input {
+  width: 65%;
+  height: 1.7rem;
+  border: 1px solid #ddd;
+  outline: none;
+  background-color: #fafafa;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.todo-item .edit-priority {
+  width: 20%;
+  height: 1.9rem;
+  border: 1px solid #ddd;
+  outline: none;
+  background-color: #fafafa;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.todo-item .btn-edit {
+  color: rgb(13, 149, 22);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.todo-item .btn-edit:hover {
+  color: rgb(6, 44, 11);
+}
+
+.todo-item .btn-save {
+  background-color: #00ff37;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+} 
+
+.todo-item .btn-save:hover {
+  background-color: #00d52f;
+}
+
+.todo-item .btn-cancel{
+  background-color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.todo-item .btn-cancel:hover {
+  background-color: rgb(218, 3, 3);
+}
+
+.todo-item .font-priority {
+  color: rgb(42, 41, 41);
+  font-size: 1rem;
+}
+
 .panel {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .panel button {
@@ -220,3 +297,14 @@ h4{
   margin-left: 0.5rem;
 }
 
+.scroll {
+  padding-right: 0.5rem ;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll::-webkit-scrollbar:hover {
+  background: #555; 
+}
