@@ -45,7 +45,7 @@ body {
 }
 
 .form-input {
-  width: 65%;
+  width: 61%;
   height: 40px;
   border: 1px solid #ddd;
   outline: none;
@@ -58,7 +58,7 @@ body {
 }
 
 .form-select {
-  width: 15%;
+  width: 16%;
   height: 57px;
   border: 1px solid #ddd;
   outline: none;
@@ -72,7 +72,7 @@ body {
 
 .form-btn {
   height: 57px;
-  width: 15%;
+  width: 16%;
   border: none;
   outline: none;
   padding: 5px;
