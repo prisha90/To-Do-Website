@@ -48,19 +48,24 @@ const TodoList = () => {
           else return "priority"
         })}>Sort by Priority</button>
       </div>
-      {/* add a scroll */}
       <div className="scroll" style={{ height: '400px', overflowY: 'scroll' }}>
-        {/* list of TodoItem components corresponding to a to-do item in the sortedTodos array. */}
-      {todos.length > 0 ? (
+     {/* list of TodoItem components corresponding to a to-do item in the sortedTodos array. */}
+
+      {/* {todos.length > 0 ? (
+        sortedTodos.map((todo) => (
+          <TodoItem key={todo.id} todo={todo} />
+        ))
+      ) : (
+        <h4>{message}</h4>
+      )} */}
+      {sortedTodos.length > 0 ? (
         sortedTodos.map((todo) => (
           <TodoItem key={todo.id} todo={todo} />
         ))
       ) : (
         <h4>{message}</h4>
       )}
-      </div>
-
-      
+      </div>      
     </div>
   );
 };
